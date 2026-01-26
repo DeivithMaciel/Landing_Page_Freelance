@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
-import { colors } from '../../styles/GlobalStyles'
+import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.header`
     position: fixed;
     top: 0;
     width: 100%;
-    height 72px;
-    padding: 16px;
+    height: 72px;
     background-color: ${colors.lightGray};
     backdrop-filter: blur(8px);
     border-bottom: 1px solid ${colors.lightBlack};
@@ -21,12 +20,20 @@ export const Content = styled.div`
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 16px;
+
+    @media (max-width: ${breakpoints}) {
+        // padding-right: 0;
+    }
 `
 export const Logo = styled.span`
     font-size: 36px;
     font-weight: bold;
     color: ${colors.white};
+
+    @media (max-width: ${breakpoints.mobile}) {
+        font-size: 24px;
+    }
 `
 
 export const Actions = styled.div`
@@ -43,6 +50,14 @@ export const Actions = styled.div`
 
         &:hover {
             filter: brightness(0.9);
+        }
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+        button {
+            padding: 8px;
+            font-size: 8px;
+            margin-right: 16px;
         }
     }
 `

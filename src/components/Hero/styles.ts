@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
-import { colors } from '../../styles/GlobalStyles'
+import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.section`
     width: 100%;
-    padding: 96px 24px;
+    padding: 96px 16px;
     background-color: ${colors.white};
+
+    @media (max-width: ${breakpoints.mobile}) {
+        display: flex;
+        align-items: center;
+    }
 `
 
 export const Content = styled.div`
@@ -58,6 +63,25 @@ export const TextBox = styled.div`
         border-radius: 16px;
         padding: 8px;
         text-align: center;
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 20px;
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+        }
     }
 `
 
