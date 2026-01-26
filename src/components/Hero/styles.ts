@@ -5,7 +5,7 @@ import { colors } from '../../styles/GlobalStyles'
 export const Container = styled.section`
     width: 100%;
     padding: 96px 24px;
-    background-color: ${colors.while};
+    background-color: ${colors.white};
 `
 
 export const Content = styled.div`

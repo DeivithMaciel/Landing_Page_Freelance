@@ -1,11 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
-    while: '#ecf0f1',
     darkBlue: '#2c3e50',
     lightBlue: '#34495e',
     blue: '#34495e',
+    white: '#ecf0f1',
     gray: ' #dfe6e9',
+    lightGray: '#95a5a6',
+    lightBlack: '#7f8c8d',
+}
+
+export const breakpoints = {
+    tablet: '1024px',
+    mobile: '768px',
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,6 +24,6 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    // background-color: ${colors.while};
+    // background-color: ${colors.white};
 }
 `
