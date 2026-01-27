@@ -2,6 +2,8 @@ import { Header } from '../../components/Header'
 import { Hero } from '../../components/Hero'
 
 import Section from '../../sections/Services'
+import CTA from '../../sections/CTA'
+import { Footer } from '../../components/Footer'
 
 export const Home = () => {
     return (
@@ -9,6 +11,8 @@ export const Home = () => {
             <Header />
             <Hero />
             <Section />
+            <CTA />
+            <Footer />
         </div>
     )
 }

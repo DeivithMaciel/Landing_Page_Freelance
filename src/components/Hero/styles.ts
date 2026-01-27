@@ -6,7 +6,7 @@ export const Container = styled.section`
     padding: 96px 16px;
     background-color: ${colors.white};
 
-    @media (max-width: ${breakpoints.mobile}) {
+    @media (max-width: ${breakpoints.tablet}) {
         display: flex;
         align-items: center;
     }

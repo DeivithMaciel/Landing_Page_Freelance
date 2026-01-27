@@ -51,13 +51,13 @@ export const CardItem = styled.li`
     list-style: none;
 
     h3 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     p {
         margin-top: 12px;
         font-size: 16px;
         color: ${colors.lightBlue};
-        line-height: 1.5;
+        line-height: 24px;
     }
 `
