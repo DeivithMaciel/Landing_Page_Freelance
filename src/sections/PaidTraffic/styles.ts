@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/GlobalStyles'
+import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.section`
     padding: 96px 24px;
@@ -18,7 +18,6 @@ export const Content = styled.div`
 
     h2 {
         font-size: 48px;
-        paddin-top: 8px;
     }
 
     p {
@@ -29,7 +28,6 @@ export const Content = styled.div`
 
     ul {
         margin-top: 24px;
-        padding-left: 24px;
 
         li {
             font-size: 18px;
@@ -45,12 +43,39 @@ export const Content = styled.div`
         font-size: 16px;
         color: ${colors.gray};
     }
+
+    @media (max-width: ${breakpoints.tablet}) {
+        h2 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        ul {
+            li {
+                font-size: 18px;
+                line-height: 16px;
+            }
+        }
+    }
+    @media (max-width: ${breakpoints.mobile}) {
+        h2 {
+            font-size: 30px;
+        }
+
+        small {
+            font-size: 14px;
+        }
+    }
 `
 
 export const VisualBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     padding: 16px;
     flex: 1;
