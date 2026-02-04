@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.section`
     padding: 96px 16px;
-    background-color: ${colors.white};
+    background-color: ${colors.black};
 
     @media (max-width: ${breakpoints.tablet}) {
         display: flex;

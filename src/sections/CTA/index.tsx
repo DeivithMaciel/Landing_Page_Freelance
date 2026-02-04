@@ -6,8 +6,8 @@ export const CTA = () => {
             <S.Container>
                 <h2>Pronto para começar?</h2>
                 <p>
-                    Crio sua Landing Page e configuro campanhas simples para
-                    você começar a gerar leads.
+                    Crio sua Landing Page para receber seu tráfego para você
+                    começar a gerar leads.
                 </p>
                 <button>Falar no WhatsApp</button>
             </S.Container>

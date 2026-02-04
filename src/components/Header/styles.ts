@@ -29,7 +29,7 @@ export const Content = styled.div`
 export const Logo = styled.span`
     font-size: 36px;
     font-weight: bold;
-    color: ${colors.white};
+    color: ${colors.black};
 
     @media (max-width: ${breakpoints.mobile}) {
         font-size: 24px;

@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Section = styled.section`
     padding: 96px 24px;
-    background-color: ${colors.white};
+    background-color: ${colors.black};
 `
 
 export const Container = styled.div`
