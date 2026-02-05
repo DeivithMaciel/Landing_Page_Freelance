@@ -17,18 +17,18 @@ export const Container = styled.div`
     }
 
     p {
-        margin-top: 16px;
+        margin: 24px 0;
         font-size: 24px;
         color: ${colors.gray};
     }
 
-    button {
-        margin-top: 32px;
+    a {
         padding: 16px 32px;
         border-radius: 8px;
         border: none;
         background-color: ${colors.blue};
         color: #fff;
+        text-decoration: none;
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;

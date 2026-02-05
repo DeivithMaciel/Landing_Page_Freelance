@@ -1,24 +1,76 @@
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+
 import * as S from './styles'
 
 export const Contact = () => {
+    const [loading, setLoading] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [error, setError] = useState(false)
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setLoading(true)
+        setError(false)
+        setSuccess(false)
+
+        emailjs
+            .sendForm(
+                'service_p8vhc4l',
+                'template_5fiqk1l',
+                e.currentTarget,
+                'T9rJzCfqiWlTGme_v'
+            )
+            .then(() => {
+                setSuccess(true)
+                e.currentTarget.reset()
+            })
+            .catch(() => {
+                setError(true)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }
+
     return (
         <S.Container>
             <S.Content>
-                <S.Form>
+                <S.Form onSubmit={handleSubmit}>
                     <h2>Entre em contato</h2>
+
                     <p>
                         Esta landing page é ilustrativa e demonstra como seu
-                        produto ou serviço pode captar leads de forma simples e
-                        eficiente.
+                        produto ou serviço pode captar leads de forma simples.
                     </p>
+
                     <span>
-                        📞 <a href="tel: +5551999999999">(51) 99999-9999</a>
+                        📞 <a href="tel:+5551981458704">(55) 51 98145-8704</a>
                     </span>
-                </S.Form>
-                <S.Form>
-                    <input type="text" placeholder="Seu nome" />
-                    <input type="email" placeholder="Seu melhor email" />
-                    <button type="button">Quero minha landing page</button>
+
+                    <input name="user_name" placeholder="Seu nome" required />
+
+                    <input
+                        name="user_email"
+                        type="email"
+                        placeholder="Seu melhor email"
+                        required
+                    />
+
+                    <textarea
+                        name="message"
+                        placeholder="Sua mensagem"
+                        required
+                    />
+
+                    <button type="submit" disabled={loading}>
+                        {loading ? 'Enviando...' : 'Quero minha landing page'}
+                    </button>
+
+                    {success && <small>✅ Mensagem enviada com sucesso!</small>}
+                    {error && (
+                        <small>❌ Erro ao enviar. Tente novamente.</small>
+                    )}
                 </S.Form>
             </S.Content>
         </S.Container>

@@ -6,7 +6,7 @@ export const Header = () => {
             <S.Content>
                 <S.Logo>TráfegoQuality</S.Logo>
                 <S.Actions>
-                    <button>Falar no WhatsApp</button>
+                    <a href="https://wa.me/5511981458704">Falar no WhatsApp</a>
                 </S.Actions>
             </S.Content>
         </S.Container>

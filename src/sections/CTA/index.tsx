@@ -9,7 +9,7 @@ export const CTA = () => {
                     Crio sua Landing Page para receber seu tráfego para você
                     começar a gerar leads.
                 </p>
-                <button>Falar no WhatsApp</button>
+                <a href="https://wa.me/5511981458704">Falar no WhatsApp</a>
             </S.Container>
         </S.Section>
     )

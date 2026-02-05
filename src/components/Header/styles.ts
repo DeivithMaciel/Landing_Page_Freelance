@@ -37,10 +37,11 @@ export const Logo = styled.span`
 `
 
 export const Actions = styled.div`
-    button {
+    a {
         padding: 10px 20px;
         border-radius: 6px;
         border: none;
+        text-decoration: none;
         background-color: ${colors.lightBlack};
         color: #fff;
         font-size: 16px;
@@ -54,7 +55,7 @@ export const Actions = styled.div`
     }
 
     @media (max-width: ${breakpoints.mobile}) {
-        button {
+        a {
             padding: 8px;
             font-size: 8px;
             margin-right: 16px;
