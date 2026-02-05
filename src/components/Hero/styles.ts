@@ -15,7 +15,13 @@ export const Container = styled.section`
 
     @media (max-width: ${breakpoints.tablet}) {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        padding-bottom: 0;
+
+        small {
+            text-align: center;
+        }
     }
 `
 
@@ -26,6 +32,10 @@ export const Content = styled.div`
     align-items: center;
     justify-content: center;
     gap: 48px;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        gap: 24px;
+    }
 `
 
 export const TextBox = styled.div`

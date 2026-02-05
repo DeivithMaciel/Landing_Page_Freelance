@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors } from '../../styles/GlobalStyles'
+import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.div`
     padding: 96px 24px;
@@ -9,10 +9,14 @@ export const Container = styled.div`
 
 export const Content = styled.section`
     display: flex;
-    justify-content: space between;
+    justify-content: space-between;
     gap: 64px;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+    }
 `
 
 export const Info = styled.div`
@@ -67,5 +71,10 @@ export const Form = styled.form`
         &:hover {
             opacity: 0.85;
         }
+    }
+
+    @media (max-width: ${breakpoints.tablet}) {
+        display: flex;
+        text-align: center;
     }
 `
