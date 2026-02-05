@@ -5,7 +5,7 @@ export const Section = () => {
         <S.Section>
             <S.Container>
                 <S.Header>
-                    <h2>Tráfego pago com foco em conversão</h2>
+                    <h2>Landing pages prontas para conversão</h2>
                     <p>
                         Estruturas simples, bem configuradas e pensadas para
                         gerar leads reais.
@@ -13,28 +13,28 @@ export const Section = () => {
                 </S.Header>
                 <S.CardList>
                     <S.CardItem>
-                        <h3>Meta ads</h3>
-                        <p>Criação de campanhas no Facebook e Instagram.</p>
-                    </S.CardItem>
-                    <S.CardItem>
-                        <h3>Pixel e eventos</h3>
+                        <h3>Estrutura focada em leads</h3>
                         <p>
-                            Configuração correta de pixel e eventos para
-                            acompanhar resultados reais.
+                            Layout pensado para guiar o visitante até a ação
+                            principal, sem distrações.
                         </p>
                     </S.CardItem>
                     <S.CardItem>
-                        <h3>Lading Page</h3>
+                        <h3>Chamadas para ação claras</h3>
+                        <p>Landing pages prontas para conversão.</p>
+                    </S.CardItem>
+                    <S.CardItem>
+                        <h3>WhatsApp, email e formulário</h3>
                         <p>
-                            Página simples e objetiva, pensada para conversão e
-                            tráfego pago.
+                            Contato direto funcionanado, pronto para receber
+                            mensagens e leads reais.
                         </p>
                     </S.CardItem>
                     <S.CardItem>
-                        <h3>WhatsApp</h3>
+                        <h3>Preparada para tráfego pago</h3>
                         <p>
-                            Integração direta com WhatsApp para facilitar o
-                            contado com leads.
+                            Página otimizada para receber anúncios do Google ou
+                            redes sociais.
                         </p>
                     </S.CardItem>
                 </S.CardList>

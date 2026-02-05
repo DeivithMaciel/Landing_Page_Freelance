@@ -13,6 +13,11 @@ export const Footer = () => {
                         resultados reais.
                     </p>
                 </S.Brand>
+                <small>
+                    Aviso: Este site é apenas ilustrativo. As informações,
+                    marcas e serviços apresentados são exemplos de estrutura e
+                    layout.
+                </small>
                 <span>
                     &copy; {year} TráfegoQuality. Todos os direitos reservados
                 </span>

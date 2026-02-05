@@ -6,6 +6,13 @@ export const Container = styled.section`
     padding: 96px 16px;
     background-color: ${colors.black};
 
+    small {
+        display: flex;
+        justify-content: center;
+        padding-top: 24px;
+        font-size: 14px;
+    }
+
     @media (max-width: ${breakpoints.tablet}) {
         display: flex;
         align-items: center;
@@ -62,6 +69,7 @@ export const TextBox = styled.div`
         border-radius: 16px;
         padding: 8px;
         text-align: center;
+        font-size: 14px;
     }
 
     @media (max-width: ${breakpoints.mobile}) {

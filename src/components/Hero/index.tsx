@@ -5,18 +5,22 @@ export const Hero = () => {
         <S.Container>
             <S.Content>
                 <S.TextBox>
-                    <h1>Tráfego pago com foco em conversão</h1>
+                    <h1>Landing pages focadas em conversão e performance</h1>
                     <p>
-                        Criamos landing pages e campanhas no Meta e TikTok Ads
-                        para transformar cliques em leads e vendas.
+                        Estruturas simples, rápidas e preparadas para tráfego
+                        pago, WhatsApp e formulários.
                     </p>
-                    <button>Quero gerar mais leads</button>
-                    <span>Landing Page ° Meta ads ° TikTok Ads ° WhatsApp</span>
+                    <button>Solicitar minha landing page</button>
+                    <span>Landing Page ° Pronta para conversão ° WhatsApp</span>
                 </S.TextBox>
                 <S.BackgroundImage>
                     {/* adicionar futuramente */}
                 </S.BackgroundImage>
             </S.Content>
+            <small>
+                Aviso: Este site é apenas ilustrativo. As informações, marcas e
+                serviços apresentados são exemplos de estrutura e layout.
+            </small>
         </S.Container>
     )
 }

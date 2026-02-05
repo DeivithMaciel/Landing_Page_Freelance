@@ -5,17 +5,19 @@ import Section from '../../sections/Services'
 import CTA from '../../sections/CTA'
 import { Footer } from '../../components/Footer'
 import PaidTraffic from '../../sections/PaidTraffic'
+import { Contact } from '../../sections/Contact'
 
 export const Home = () => {
     return (
-        <div>
+        <>
             <Header />
             <Hero />
             <Section />
             <PaidTraffic />
             <CTA />
+            <Contact />
             <Footer />
-        </div>
+        </>
     )
 }
 
