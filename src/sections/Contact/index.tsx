@@ -16,11 +16,12 @@ export const Contact = () => {
 
         emailjs
             .sendForm(
-                'service_p8vhc4l',
-                'template_5fiqk1l',
+                import.meta.env.VITE_EMAILJS_service_p8vhc4l,
+                import.meta.env.VITE_EMAILJS_template_5fiqk1l,
                 e.currentTarget,
-                'T9rJzCfqiWlTGme_v'
+                import.meta.env.VITE_EMAILJS_T9rJzCfqiWlTGme_v
             )
+
             .then(() => {
                 setSuccess(true)
                 e.currentTarget.reset()
