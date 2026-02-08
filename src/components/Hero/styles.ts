@@ -11,14 +11,7 @@ export const Container = styled.section`
         justify-content: center;
         padding-top: 24px;
         font-size: 14px;
-    }
-
-    @media (max-width: ${breakpoints.tablet}) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 0;
-
+        color: #fff;
         small {
             text-align: center;
         }
@@ -33,6 +26,10 @@ export const Content = styled.div`
     justify-content: center;
     gap: 48px;
 
+    @media (max-width: ${breakpoints.tablet}) {
+        flex-direction: column;
+    }
+
     @media (max-width: ${breakpoints.mobile}) {
         gap: 24px;
     }
@@ -45,14 +42,14 @@ export const TextBox = styled.div`
         font-size: 48px;
         line-height: 1.2;
         font-weight: extra-bold;
-        color: ${colors.darkBlue};
+        color: #4a69bd;
     }
 
     p {
         margin-top: 16px;
         font-size: 18px;
         line-height: 1.6;
-        color: ${colors.lightBlue};
+        color: ${colors.lightGray};
     }
 
     button {
@@ -80,6 +77,7 @@ export const TextBox = styled.div`
         padding: 8px;
         text-align: center;
         font-size: 14px;
+        color: ${colors.lightGray};
     }
 
     @media (max-width: ${breakpoints.mobile}) {
@@ -105,6 +103,6 @@ export const TextBox = styled.div`
 export const BackgroundImage = styled.div`
     flex: 1;
     height: 320px;
-    background-color: ${colors.gray};
+    background-color: ${colors.darkBlue};
     border-radius: 16px;
 `

@@ -3,7 +3,7 @@ import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.section`
     padding: 96px 24px;
-    background-color: ${colors.lightBlack};
+    background-color: ${colors.blue};
 `
 
 export const Content = styled.div`
@@ -14,7 +14,7 @@ export const Content = styled.div`
     gap: 48px;
     max-width: 1200px;
     margin: 0 auto;
-    color: ${colors.darkBlue};
+    color: ${colors.gray};
 
     h2 {
         font-size: 48px;

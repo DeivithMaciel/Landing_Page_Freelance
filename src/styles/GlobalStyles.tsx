@@ -2,12 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
     darkBlue: '#2c3e50',
-    lightBlue: '#34495e',
     blue: '#34495e',
-    black: '#ecf0f1',
+    white: '#ecf0f1',
     gray: ' #dfe6e9',
     lightGray: '#95a5a6',
-    lightBlack: '#7f8c8d',
+    darkGray: '#7f8c8d',
+    black: '#2d3436',
 }
 
 export const breakpoints = {
@@ -24,6 +24,6 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    // background-color: ${colors.black};
+    // background-color: ${colors.white};
 }
 `

@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.div`
     padding: 96px 24px;
-    background-color: ${colors.black};
+    background-color: ${colors.darkGray};
 `
 
 export const Content = styled.section`
@@ -51,7 +51,8 @@ export const Form = styled.form`
     flex-direction: column;
     gap: 16px;
 
-    input {
+    input,
+    textarea {
         padding: 16px;
         border-radius: 8px;
         border: none;
@@ -63,7 +64,7 @@ export const Form = styled.form`
         border-radius: 8px;
         border: none;
         background-color: ${colors.darkBlue};
-        color: ${colors.black};
+        color: ${colors.white};
         font-size: 16px;
         cursor: pointer;
         transition: opacity 0.2s;
@@ -71,6 +72,10 @@ export const Form = styled.form`
         &:hover {
             opacity: 0.85;
         }
+    }
+
+    textarea {
+        resize: none;
     }
 
     @media (max-width: ${breakpoints.tablet}) {

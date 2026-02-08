@@ -10,7 +10,9 @@ export const Hero = () => {
                         Estruturas simples, rápidas e preparadas para tráfego
                         pago, WhatsApp e formulários.
                     </p>
-                    <button>Solicitar minha landing page</button>
+                    <a href="https://wa.me/5551981458704">
+                        <button>Solicitar minha landing page</button>
+                    </a>
                     <span>Landing Page ° Pronta para conversão ° WhatsApp</span>
                 </S.TextBox>
                 <S.BackgroundImage>

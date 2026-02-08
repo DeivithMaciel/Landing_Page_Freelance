@@ -19,13 +19,13 @@ export const Header = styled.header`
 
     h2 {
         font-size: 40px;
-        color: ${colors.darkBlue};
+        color: ${colors.lightGray};
     }
 
     p {
         margin-top: 16px;
         font-size: 18px;
-        color: ${colors.lightBlue};
+        color: ${colors.lightGray};
     }
 `
 
@@ -46,7 +46,8 @@ export const CardList = styled.ul`
 export const CardItem = styled.li`
     padding: 32px;
     border-radius: 16px;
-    background-color: ${colors.lightBlack};
+    background-color: ${colors.blue};
+    color: ${colors.white};
     text-align: left;
     list-style: none;
 
@@ -57,7 +58,6 @@ export const CardItem = styled.li`
     p {
         margin-top: 12px;
         font-size: 16px;
-        color: ${colors.lightBlue};
         line-height: 24px;
     }
 `

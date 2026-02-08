@@ -9,7 +9,7 @@ export const Container = styled.header`
     height: 72px;
     background-color: ${colors.lightGray};
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid ${colors.lightBlack};
+    border-bottom: 1px solid ${colors.darkGray};
     z-index: 1;
 `
 
@@ -29,7 +29,7 @@ export const Content = styled.div`
 export const Logo = styled.span`
     font-size: 36px;
     font-weight: bold;
-    color: ${colors.black};
+    color: ${colors.white};
 
     @media (max-width: ${breakpoints.mobile}) {
         font-size: 24px;
@@ -42,7 +42,7 @@ export const Actions = styled.div`
         border-radius: 6px;
         border: none;
         text-decoration: none;
-        background-color: ${colors.lightBlack};
+        background-color: ${colors.darkGray};
         color: #fff;
         font-size: 16px;
         font-weight: semi-bold;

@@ -3,7 +3,7 @@ import { colors } from '../../styles/GlobalStyles'
 
 export const Container = styled.footer`
     background-color: ${colors.lightGray};
-    border-top: 1px solid ${colors.lightBlack};
+    border-top: 1px solid ${colors.darkGray};
     padding: 32px 24px;
 `
 
