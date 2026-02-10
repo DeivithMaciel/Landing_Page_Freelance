@@ -2,19 +2,21 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 import * as S from './styles'
+import Toast from '../../components/Toast'
 
 export const Contact = () => {
     const [loading, setLoading] = useState(false)
-    const [success, setSuccess] = useState(false)
-    const [error, setError] = useState(false)
+    const [toast, setToast] = useState<null | {
+        message: string
+        type: 'success' | 'error'
+    }>(null)
 
     const [startTime] = useState(() => Date.now())
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        setLoading(false)
-        setError(false)
+        setLoading(true)
 
         if (Date.now() - startTime < 1500) {
             return
@@ -35,13 +37,18 @@ export const Contact = () => {
                 e.currentTarget,
                 import.meta.env.VITE_EMAILJS_T9rJzCfqiWlTGme_v
             )
-
             .then(() => {
-                setSuccess(true)
+                setToast({
+                    message: 'Mensagem enviada com sucesso',
+                    type: 'success',
+                })
                 e.currentTarget.reset()
             })
             .catch(() => {
-                setError(true)
+                setToast({
+                    message: 'Erro ao enviar. Tente novamente.',
+                    type: 'error',
+                })
             })
             .finally(() => {
                 setLoading(false)
@@ -88,9 +95,13 @@ export const Contact = () => {
                     <button type="submit" disabled={loading}>
                         {loading ? 'Enviando...' : 'Quero minha landing page'}
                     </button>
-
-                    {success && <small>Mensagem enviada com sucesso!</small>}
-                    {error && <small>Erro ao enviar. Tente novamente.</small>}
+                    {toast && (
+                        <Toast
+                            message={toast.message}
+                            type={toast.type}
+                            onClose={() => setToast(null)}
+                        />
+                    )}
                 </S.Form>
             </S.Content>
         </S.Container>
