@@ -19,7 +19,7 @@ export const Header = styled.header`
 
     h2 {
         font-size: 40px;
-        color: ${colors.lightGray};
+        color: ${colors.white};
     }
 
     p {

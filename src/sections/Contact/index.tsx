@@ -8,11 +8,25 @@ export const Contact = () => {
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
 
+    const [startTime] = useState(() => Date.now())
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setLoading(true)
+
+        setLoading(false)
         setError(false)
-        setSuccess(false)
+
+        if (Date.now() - startTime < 1500) {
+            return
+        }
+
+        const getBot = (
+            e.currentTarget.elements.namedItem('adress') as HTMLInputElement
+        )?.value
+
+        if (getBot) {
+            return
+        }
 
         emailjs
             .sendForm(
@@ -57,6 +71,13 @@ export const Contact = () => {
                         placeholder="Seu melhor email"
                         required
                     />
+                    <input
+                        type="text"
+                        name="adress"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        style={{ display: 'none' }}
+                    />
 
                     <textarea
                         name="message"
@@ -68,10 +89,8 @@ export const Contact = () => {
                         {loading ? 'Enviando...' : 'Quero minha landing page'}
                     </button>
 
-                    {success && <small>✅ Mensagem enviada com sucesso!</small>}
-                    {error && (
-                        <small>❌ Erro ao enviar. Tente novamente.</small>
-                    )}
+                    {success && <small>Mensagem enviada com sucesso!</small>}
+                    {error && <small>Erro ao enviar. Tente novamente.</small>}
                 </S.Form>
             </S.Content>
         </S.Container>
