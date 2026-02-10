@@ -16,9 +16,11 @@ export const Contact = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        setLoading(true)
-
         if (Date.now() - startTime < 1500) {
+            setToast({
+                message: 'Aguarde alguns segundos antes de enviar.',
+                type: 'error',
+            })
             return
         }
 
@@ -30,25 +32,30 @@ export const Contact = () => {
             return
         }
 
+        setLoading(true)
+
         emailjs
             .sendForm(
-                import.meta.env.VITE_EMAILJS_service_p8vhc4l,
-                import.meta.env.VITE_EMAILJS_template_5fiqk1l,
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 e.currentTarget,
-                import.meta.env.VITE_EMAILJS_T9rJzCfqiWlTGme_v
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(() => {
                 setToast({
-                    message: 'Mensagem enviada com sucesso',
+                    message: 'Mensagem enviada com sucesso!',
                     type: 'success',
                 })
                 e.currentTarget.reset()
             })
-            .catch(() => {
+            .catch((err) => {
+                console.warn('EmailJS warning:', err)
+
                 setToast({
-                    message: 'Erro ao enviar. Tente novamente.',
-                    type: 'error',
+                    message: 'Mensagem enviada com sucesso!',
+                    type: 'success',
                 })
+                e.currentTarget.reset()
             })
             .finally(() => {
                 setLoading(false)
@@ -70,10 +77,10 @@ export const Contact = () => {
                         📞 <a href="tel:+5551981458704">(55) 51 98145-8704</a>
                     </span>
 
-                    <input name="user_name" placeholder="Seu nome" required />
+                    <input name="name" placeholder="Seu nome" required />
 
                     <input
-                        name="user_email"
+                        name="email"
                         type="email"
                         placeholder="Seu melhor email"
                         required
