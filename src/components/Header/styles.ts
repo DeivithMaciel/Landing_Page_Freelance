@@ -38,7 +38,7 @@ export const Logo = styled.span`
 
 export const Actions = styled.div`
     a {
-        padding: 10px 20px;
+        padding: 16px 24px;
         border-radius: 6px;
         border: none;
         text-decoration: none;
