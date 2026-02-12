@@ -109,7 +109,7 @@ export const Contact = ({ texts }: Props) => {
 
                     <button type="submit" disabled={loading}>
                         {loading
-                            ? `${texts.ContactLoading}`
+                            ? `${texts.contactLoading}`
                             : `${texts.contactButton}`}
                     </button>
                     {toast && (
