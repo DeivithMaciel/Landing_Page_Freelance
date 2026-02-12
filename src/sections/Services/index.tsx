@@ -1,41 +1,33 @@
+import type { TextsType } from '../../i18n/Texts'
 import * as S from './styles'
 
-export const Section = () => {
+type Props = {
+    texts: TextsType
+}
+export const Section = ({ texts }: Props) => {
     return (
         <S.Section>
             <S.Container>
                 <S.Header>
-                    <h2>Landing pages prontas para conversão</h2>
-                    <p>
-                        Estruturas simples, bem configuradas e pensadas para
-                        gerar leads reais.
-                    </p>
+                    <h2>{texts.servicesTitle}</h2>
+                    <p>{texts.servicesSubtitle}</p>
                 </S.Header>
                 <S.CardList>
                     <S.CardItem>
-                        <h3>Estrutura focada em leads</h3>
-                        <p>
-                            Layout pensado para guiar o visitante até a ação
-                            principal, sem distrações.
-                        </p>
+                        <h3>{texts.service1Title}</h3>
+                        <p>{texts.service1Text}</p>
                     </S.CardItem>
                     <S.CardItem>
-                        <h3>Chamadas para ação claras</h3>
-                        <p>Landing pages prontas para conversão.</p>
+                        <h3>{texts.service2Title}</h3>
+                        <p>{texts.service2Text}</p>
                     </S.CardItem>
                     <S.CardItem>
-                        <h3>WhatsApp, email e formulário</h3>
-                        <p>
-                            Contato direto funcionanado, pronto para receber
-                            mensagens e leads reais.
-                        </p>
+                        <h3>{texts.service3Title}</h3>
+                        <p>{texts.service3Text}</p>
                     </S.CardItem>
                     <S.CardItem>
-                        <h3>Preparada para tráfego pago</h3>
-                        <p>
-                            Página otimizada para receber anúncios do Google ou
-                            redes sociais.
-                        </p>
+                        <h3>{texts.service4Title}</h3>
+                        <p>{texts.service4Text}</p>
                     </S.CardItem>
                 </S.CardList>
             </S.Container>

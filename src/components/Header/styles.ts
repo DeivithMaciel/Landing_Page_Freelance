@@ -25,8 +25,9 @@ export const Content = styled.div`
     button {
         padding: 8px;
         border-radius: 8px;
-        background-color: ${colors.black};
-        color: ${colors.lightGray};
+        border: none;
+        background-color: ${colors.darkGray};
+        color: ${colors.white};
         cursor: pointer;
 
         &:hover {
@@ -34,8 +35,13 @@ export const Content = styled.div`
         }
     }
 
-    @media (max-width: ${breakpoints}) {
-        // padding-right: 0;
+    @media (max-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+
+        button {
+            padding: 4px;
+            font-size: 12px;
+        }
     }
 `
 export const Logo = styled.span`
@@ -68,9 +74,10 @@ export const Actions = styled.div`
 
     @media (max-width: ${breakpoints.mobile}) {
         a {
-            padding: 8px;
-            font-size: 8px;
-            margin-right: 16px;
+            display: none;
+            // padding: 8px;
+            // font-size: 8px;
+            // margin-right: 16px;
         }
     }
 `

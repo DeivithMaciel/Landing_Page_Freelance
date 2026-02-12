@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
-import * as S from './styles'
+import type { TextsType } from '../../i18n/Texts'
+
 import Toast from '../../components/Toast'
 
-export const Contact = () => {
+import * as S from './styles'
+
+type Props = {
+    texts: TextsType
+}
+
+export const Contact = ({ texts }: Props) => {
     const [loading, setLoading] = useState(false)
     const [toast, setToast] = useState<null | {
         message: string
@@ -43,7 +50,7 @@ export const Contact = () => {
             )
             .then(() => {
                 setToast({
-                    message: 'Mensagem enviada com sucesso!',
+                    message: texts.toastMessage,
                     type: 'success',
                 })
                 e.currentTarget.reset()
@@ -52,7 +59,7 @@ export const Contact = () => {
                 console.warn('EmailJS warning:', err)
 
                 setToast({
-                    message: 'Mensagem enviada com sucesso!',
+                    message: texts.toastMessage,
                     type: 'success',
                 })
                 e.currentTarget.reset()
@@ -66,23 +73,24 @@ export const Contact = () => {
         <S.Container>
             <S.Content>
                 <S.Form onSubmit={handleSubmit}>
-                    <h2>Entre em contato</h2>
+                    <h2>{texts.contactTitle}</h2>
 
-                    <p>
-                        Esta landing page é ilustrativa e demonstra como seu
-                        produto ou serviço pode captar leads de forma simples.
-                    </p>
+                    <p>{texts.contactSubtitle}</p>
 
                     <span>
                         📞 <a href="tel:+5551981458704">(55) 51 98145-8704</a>
                     </span>
 
-                    <input name="name" placeholder="Seu nome" required />
+                    <input
+                        name="name"
+                        placeholder={texts.contactName}
+                        required
+                    />
 
                     <input
                         name="email"
                         type="email"
-                        placeholder="Seu melhor email"
+                        placeholder={texts.contactEmail}
                         required
                     />
                     <input
@@ -95,12 +103,14 @@ export const Contact = () => {
 
                     <textarea
                         name="message"
-                        placeholder="Sua mensagem"
+                        placeholder={texts.contactMessage}
                         required
                     />
 
                     <button type="submit" disabled={loading}>
-                        {loading ? 'Enviando...' : 'Quero minha landing page'}
+                        {loading
+                            ? `${texts.ContactLoading}`
+                            : `${texts.contactButton}`}
                     </button>
                     {toast && (
                         <Toast

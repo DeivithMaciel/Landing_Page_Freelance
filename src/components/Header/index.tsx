@@ -11,7 +11,7 @@ export const Header = ({ lang, setLang }: Props) => {
     return (
         <S.Container>
             <S.Content>
-                <S.Logo>TráfegoQuality</S.Logo>
+                <S.Logo>TrafficQuality</S.Logo>
                 <button onClick={() => setLang(lang === 'pt' ? 'en' : 'pt')}>
                     🌐 {lang === 'pt' ? 'PT-BR' : 'EN'}
                 </button>

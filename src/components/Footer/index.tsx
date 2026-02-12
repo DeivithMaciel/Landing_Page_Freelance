@@ -1,25 +1,23 @@
+import type { TextsType } from '../../i18n/Texts'
+
 import * as S from './styles'
 
-export const Footer = () => {
+type Props = {
+    texts: TextsType
+}
+
+export const Footer = ({ texts }: Props) => {
     const year = new Date().getFullYear()
 
     return (
         <S.Container>
             <S.Content>
                 <S.Brand>
-                    <strong>TráfegoQuality</strong>
-                    <p>
-                        Landing page focada em conversão, tráfego pago e
-                        resultados reais.
-                    </p>
+                    <strong>TrafficQuality</strong>
+                    <p>{texts.footerText}</p>
                 </S.Brand>
-                <small>
-                    Este site é um projeto demonstrativo. Os contatos direcionam
-                    diretamente ao desenvolvedor.
-                </small>
-                <span>
-                    &copy; {year} TráfegoQuality. Todos os direitos reservados
-                </span>
+                <small>{texts.demoNotice}</small>
+                <span>&copy; {year} TrafficQuality. All rights reserved.</span>
             </S.Content>
         </S.Container>
     )

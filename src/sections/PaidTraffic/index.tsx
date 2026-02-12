@@ -1,30 +1,28 @@
+import type { TextsType } from '../../i18n/Texts'
+
 import * as S from './styles'
 
-export const PaidTraffic = () => {
+type Props = {
+    texts: TextsType
+}
+
+export const PaidTraffic = ({ texts }: Props) => {
     return (
         <S.Container>
             <S.Content>
                 <S.VisualBox>
-                    <h2>Landing page preparada para tráfego pago</h2>
-
-                    <p>
-                        Desenvovlvo landing pages pensada para receber tráfego
-                        pago, com estrutura clara, chamadas para ação bem
-                        posicionadas e foco total em conversão.
-                    </p>
+                    <h2>{texts.paidTitle}</h2>
+                    <p>{texts.paidText}</p>
 
                     <ul>
-                        <li>Estrutura focada em geração de leads</li>
-                        <li>CTA estratégico (WhatsApp e fórmulario)</li>
-                        <li>Página rápida e responsiva</li>
-                        <li>Organização visual pensada em conversão</li>
-                        <li>Pronta para Integração com anúncios</li>
+                        <li>{texts.paidList1}</li>
+                        <li>{texts.paidList2}</li>
+                        <li>{texts.paidList3}</li>
+                        <li>{texts.paidList4}</li>
+                        <li>{texts.paidList5}</li>
                     </ul>
 
-                    <small>
-                        *Não gerencio campanhas ou anúncios. A landing page é
-                        entregue pronto para uso em tráfego pago.
-                    </small>
+                    <small>{texts.paidNote}</small>
                 </S.VisualBox>
             </S.Content>
         </S.Container>
