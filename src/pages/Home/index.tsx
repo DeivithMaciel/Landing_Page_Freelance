@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { texts } from '../../i18n/Texts'
 
@@ -11,13 +11,7 @@ import PaidTraffic from '../../sections/PaidTraffic'
 import { Contact } from '../../sections/Contact'
 
 export const Home = () => {
-    const [lang, setLang] = useState<'pt' | 'en'>(
-        () => (localStorage.getItem('lang') as 'pt' | 'en') || 'pt'
-    )
-
-    useEffect(() => {
-        localStorage.setItem('lang', lang)
-    }, [lang])
+    const [lang, setLang] = useState<'pt' | 'en'>('en')
 
     const t = texts[lang]
 
