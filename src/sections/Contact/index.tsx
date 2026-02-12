@@ -86,10 +86,10 @@ export const Contact = () => {
                         required
                     />
                     <input
+                        autoComplete="off"
                         type="text"
                         name="adress"
                         tabIndex={-1}
-                        autoComplete="off"
                         style={{ display: 'none' }}
                     />
 

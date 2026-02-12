@@ -22,6 +22,18 @@ export const Content = styled.div`
     margin: 0 auto;
     padding: 0 16px;
 
+    button {
+        padding: 8px;
+        border-radius: 8px;
+        background-color: ${colors.black};
+        color: ${colors.lightGray};
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+
     @media (max-width: ${breakpoints}) {
         // padding-right: 0;
     }

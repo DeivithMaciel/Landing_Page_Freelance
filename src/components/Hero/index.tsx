@@ -1,28 +1,26 @@
+import { type TextsType } from '../../i18n/Texts'
+
 import * as S from './styles'
 
-export const Hero = () => {
+type Props = {
+    texts: TextsType
+}
+
+export const Hero = ({ texts }: Props) => {
     return (
         <S.Container>
             <S.Content>
                 <S.TextBox>
-                    <h1>Landing pages focadas em conversão e performance</h1>
-                    <p>
-                        Estruturas simples, rápidas e preparadas para tráfego
-                        pago, WhatsApp e formulários.
-                    </p>
+                    <h1>{texts.heroTitle}</h1>
+                    <p>{texts.heroSubtitle}</p>
                     <a href="https://wa.me/5551981458704">
-                        <button>Solicitar minha landing page</button>
+                        <button>{texts.cta}</button>
                     </a>
-                    <span>Landing Page ° Pronta para conversão ° WhatsApp</span>
+                    <span>{texts.heroTagline}</span>
                 </S.TextBox>
-                <S.BackgroundImage>
-                    {/* adicionar futuramente */}
-                </S.BackgroundImage>
+                <S.BackgroundImage>{/* add later */}</S.BackgroundImage>
             </S.Content>
-            <small>
-                Este site é um projeto demonstrativo. Os contatos direcionam
-                diretamente ao desenvolvedor.
-            </small>
+            <small>{texts.demoNotice}</small>
         </S.Container>
     )
 }
